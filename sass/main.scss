@@ -7,6 +7,7 @@ body{
     min-height: 100vh;
     margin:0px;
     font-family: 'Montserrat', sans-serif;
+    color:$clr-main;
 }
 header{
     height:120px;
@@ -40,5 +41,26 @@ nav{
         height:370px;
         object-fit: cover;
         margin-top: 20px;
+    }
+}
+.bar{
+    background-color: $clr-main;
+    height:110px;
+    width:100%;
+    margin-top:-4px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    &__btn{
+        background-color: $clr-white;
+        color: $clr-main;
+        border: none; 
+        font-size: 22px;
+        padding: 10px 20px;
+        margin: 35px;
+        &:hover{
+            /*ANIMATION FOR OPACITY*/
+        }
     }
 }

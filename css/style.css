@@ -2,6 +2,7 @@ body {
   min-height: 100vh;
   margin: 0px;
   font-family: "Montserrat", sans-serif;
+  color: #3a7a96;
 }
 
 header {
@@ -37,6 +38,28 @@ nav a:hover {
   height: 370px;
   object-fit: cover;
   margin-top: 20px;
+}
+
+.bar {
+  background-color: #3a7a96;
+  height: 110px;
+  width: 100%;
+  margin-top: -4px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.bar__btn {
+  background-color: white;
+  color: #3a7a96;
+  border: none;
+  font-size: 22px;
+  padding: 10px 20px;
+  margin: 35px;
+}
+.bar__btn:hover {
+  /*ANIMATION FOR OPACITY*/
 }
 
 /*# sourceMappingURL=style.css.map */
