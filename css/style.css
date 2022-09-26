@@ -1,3 +1,42 @@
+body {
+  min-height: 100vh;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+}
 
+header {
+  height: 120px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 50px 0 0;
+}
+nav a {
+  color: #3a7a96;
+  text-decoration: none;
+  padding: 0 0 0 30px;
+}
+nav a:hover {
+  color: #7ca7ad;
+}
+
+#logo {
+  width: 205px;
+  object-fit: contain;
+  padding: 0 0 0 50px;
+}
+
+.section_1__img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  margin-top: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */
