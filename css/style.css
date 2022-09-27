@@ -2,6 +2,26 @@ body {
   min-height: 100vh;
   margin: 0px;
   font-family: "Montserrat", sans-serif;
+  color: #3a7a96;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 300;
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 header {
@@ -37,6 +57,126 @@ nav a:hover {
   height: 370px;
   object-fit: cover;
   margin-top: 20px;
+}
+
+.bar {
+  background-color: #3a7a96;
+  height: 110px;
+  width: 100%;
+  margin-top: -4px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.bar__btn {
+  background-color: white;
+  color: #3a7a96;
+  border: none;
+  font-size: 22px;
+  padding: 10px 20px;
+  margin: 35px;
+}
+.bar__btn:hover {
+  /*ANIMATION FOR OPACITY*/
+}
+
+.about {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 70px 80px 130px;
+}
+.about p {
+  margin-top: 40px;
+  line-height: 220%;
+}
+
+.services {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.services h1 {
+  font-size: 40px;
+  margin: 0 0 40px;
+}
+.services__container {
+  background: #f6f5f6;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 85%;
+  padding: 0 0 10px;
+}
+.services__card {
+  margin: 10px 0px 0px;
+  width: 32%;
+  background: white;
+  height: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.services__card h2 {
+  margin: 0 0 25px;
+  text-align: center;
+}
+.services__icon {
+  width: 180px;
+  margin: 20px 0 0;
+}
+
+.testimonial {
+  height: 210px;
+  width: 100%;
+  margin: 100px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/testimonial.jpg");
+  background-size: cover;
+}
+.testimonial p {
+  color: white;
+  width: 90%;
+}
+.testimonial p .quotes {
+  font-size: 30px;
+}
+.testimonial p .name {
+  font-size: 16px;
+}
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 95px 0 110px;
+}
+footer .map {
+  width: 390px;
+  height: 275px;
+  object-fit: cover;
+  object-position: -25px 0;
+  margin: 0 45px 0 0;
+}
+
+.find_us p {
+  margin: 0 0 30px;
+}
+.find_us a {
+  text-decoration: none;
+  color: #3a7a96;
+}
+.find_us a:hover {
+  color: #7ca7ad;
+}
+.find_us__social {
+  height: 40px;
+  padding: 0 20px 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */
