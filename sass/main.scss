@@ -15,6 +15,25 @@ $grey-background:#f6f5f6;
         transition:opacity 200ms;
     }
 }
+@mixin after{
+    color:$clr-white;
+    display:flex;
+    padding:30px 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    background-color:$clr-main;
+    @include card-opacity;
+
+}
+@mixin card-opacity{
+    position:absolute;
+    inset:0 0;
+    opacity:0;
+    transition:opacity 250ms;
+}
 
 body{ 
     min-height: 100vh;
@@ -117,6 +136,7 @@ nav{
         padding: 0 0 10px;
     }
     &__card{
+        position:relative;
         margin: 10px 0px 0px;
         width: 32%;
         background:$clr-white;
@@ -129,6 +149,48 @@ nav{
             margin:0 0 25px;
             text-align: center;
         }
+      &:hover{
+        &::after{
+          opacity:1;
+          }
+        }
+        &--1{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+        &--2{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+        &--3{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+        &--4{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+        &--5{
+            &::after{
+                content:"Wanting to return to sport but continue to get stalled by niggles or old injuries that never settle?";
+                @include after;
+            }
+        }
+        &--6{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+
     }
     &__icon{
         width:180px;
