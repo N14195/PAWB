@@ -2,12 +2,29 @@ $clr-main:#3a7a96;
 $clr-secondary:#7ca7ad;
 $clr-white:white;
 $clr-black:black;
+$grey-background:#f6f5f6;
 
 body{ 
     min-height: 100vh;
     margin:0px;
     font-family: 'Montserrat', sans-serif;
     color:$clr-main;
+}
+h1 {
+    font-size:35px;
+    font-weight: 300;
+    margin:0;
+}
+h2 {
+    font-size:30px;
+    font-weight:300;
+    margin:0;
+}
+p{
+    font-size:18px;
+    margin:0;
+    text-align: justify;
+    text-justify: inter-word;
 }
 header{
     height:120px;
@@ -74,14 +91,33 @@ nav{
         line-height: 220%;
     }
 }
-h1 {
-    font-size:35px;
-    font-weight: 300;
-    margin:0;
-}
-p{
-    font-size:18px;
-    margin:0;
-    text-align: justify;
-    text-justify: inter-word;
+.services{
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    &__container{
+        background:$grey-background;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:space-evenly;
+        width:85%;
+    }
+    &__card{
+        margin: 10px 0px 0px;
+        width: 32%;
+        background:$clr-white;
+        height:300px;
+        display:flex;
+        flex-flow:column nowrap;
+        align-items:center;
+        justify-content: space-between;
+        h2{
+            margin:0 0 25px;
+            text-align: center;
+        }
+    }
+    &__icon{
+        width:180px;
+        margin:20px 0 0;
+    }
 }
