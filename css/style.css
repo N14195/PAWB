@@ -24,6 +24,11 @@ p {
   text-justify: inter-word;
 }
 
+a {
+  text-decoration: none;
+  color: #3a7a96;
+}
+
 header {
   height: 120px;
   display: flex;
@@ -38,11 +43,36 @@ nav {
   margin: 0 50px 0 0;
 }
 nav a {
-  color: #3a7a96;
-  text-decoration: none;
   padding: 0 0 0 30px;
 }
 nav a:hover {
+  color: #7ca7ad;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown:hover .dropdown__content {
+  display: block;
+}
+.dropdown__content {
+  display: none;
+  position: absolute;
+  padding: 25px 0 10px 0;
+  left: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  min-width: 215px;
+  box-shadow: 2px 2px 8px 1px rgba(121, 121, 121, 0.1);
+  z-index: 1;
+}
+.dropdown__content a {
+  color: #3a7a96;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown__content a:hover {
   color: #7ca7ad;
 }
 
@@ -143,7 +173,7 @@ nav a:hover {
   position: absolute;
   inset: 0 0;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 350ms;
 }
 .services__card--2::after {
   content: "Text Here";
@@ -159,7 +189,7 @@ nav a:hover {
   position: absolute;
   inset: 0 0;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 350ms;
 }
 .services__card--3::after {
   content: "Text Here";
@@ -175,7 +205,7 @@ nav a:hover {
   position: absolute;
   inset: 0 0;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 350ms;
 }
 .services__card--4::after {
   content: "Text Here";
@@ -191,7 +221,7 @@ nav a:hover {
   position: absolute;
   inset: 0 0;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 350ms;
 }
 .services__card--5::after {
   content: "Wanting to return to sport but continue to get stalled by niggles or old injuries that never settle?";
@@ -207,7 +237,7 @@ nav a:hover {
   position: absolute;
   inset: 0 0;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 350ms;
 }
 .services__card--6::after {
   content: "Text Here";
@@ -223,7 +253,7 @@ nav a:hover {
   position: absolute;
   inset: 0 0;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 350ms;
 }
 .services__icon {
   width: 180px;
