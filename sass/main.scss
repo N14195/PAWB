@@ -1,8 +1,20 @@
 $clr-main:#3a7a96;
+$clr-main-hue:198;
 $clr-secondary:#7ca7ad;
 $clr-white:white;
 $clr-black:black;
 $grey-background:#f6f5f6;
+
+@mixin link_hover {
+    color:$clr-secondary;
+}
+@mixin btn_hover {
+    opacity:1;
+    &:hover{
+        opacity:0.84;
+        transition:opacity 200ms;
+    }
+}
 
 body{ 
     min-height: 100vh;
@@ -42,7 +54,7 @@ nav{
         text-decoration: none;
         padding:0 0 0 30px;
         &:hover{
-            color:$clr-secondary;
+            @include link_hover;
         }
         }
 }
@@ -51,7 +63,6 @@ nav{
     object-fit: contain;
     padding: 0 0 0 50px;
 }
-
 .section_1 {
     &__img{
         width:100%;
@@ -76,16 +87,14 @@ nav{
         font-size: 22px;
         padding: 10px 20px;
         margin: 35px;
-        &:hover{
-            /*ANIMATION FOR OPACITY*/
-        }
+        @include btn_hover;
     }
 }
 .about{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin: 70px 80px 130px;
+    margin: 70px 80px 115px;
     p{
         margin-top:40px;
         line-height: 220%;
@@ -168,7 +177,7 @@ footer{
         text-decoration:none;
         color:$clr-main;
         &:hover{
-            color:$clr-secondary;
+            @include link_hover;
         }
     }
     &__social{

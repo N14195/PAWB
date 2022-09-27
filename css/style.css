@@ -76,16 +76,18 @@ nav a:hover {
   font-size: 22px;
   padding: 10px 20px;
   margin: 35px;
+  opacity: 1;
 }
 .bar__btn:hover {
-  /*ANIMATION FOR OPACITY*/
+  opacity: 0.84;
+  transition: opacity 200ms;
 }
 
 .about {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin: 70px 80px 130px;
+  margin: 70px 80px 115px;
 }
 .about p {
   margin-top: 40px;
