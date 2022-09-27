@@ -1,8 +1,40 @@
 $clr-main:#3a7a96;
+$clr-main-hue:198;
 $clr-secondary:#7ca7ad;
 $clr-white:white;
 $clr-black:black;
 $grey-background:#f6f5f6;
+$dropdown-bg:rgba(255, 255, 255, 0.8);
+
+@mixin link_hover {
+    color:$clr-secondary;
+}
+@mixin btn_hover {
+    opacity:1;
+    &:hover{
+        opacity:0.84;
+        transition:opacity 200ms;
+    }
+}
+@mixin after{
+    color:$clr-white;
+    display:flex;
+    padding:30px 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    background-color:$clr-main;
+    @include card-opacity;
+
+}
+@mixin card-opacity{
+    position:absolute;
+    inset:0 0;
+    opacity:0;
+    transition:opacity 350ms;
+}
 
 body{ 
     min-height: 100vh;
@@ -26,6 +58,10 @@ p{
     text-align: justify;
     text-justify: inter-word;
 }
+a{
+    text-decoration:none;
+    color:$clr-main;
+}
 header{
     height:120px;
     display:flex;
@@ -38,20 +74,44 @@ nav{
     flex-flow: row nowrap;
     margin: 0 50px 0 0;
     a{
-        color:$clr-main;
-        text-decoration: none;
         padding:0 0 0 30px;
         &:hover{
-            color:$clr-secondary;
+            @include link_hover;
         }
         }
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    &:hover .dropdown__content{
+        display: block;
+        
+    }
+    &__content{
+        display: none;
+        position: absolute;
+        padding: 25px 0 10px 0;
+        left: 15px;
+        background-color:$dropdown-bg;
+        min-width: 215px;
+        box-shadow: 2px 2px 8px 1px rgba(121, 121, 121, 0.1);
+        z-index: 1;
+    a{
+        color: $clr-main;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        &:hover{
+            @include link_hover;
+        }
+    }
+    }
 }
 #logo{
     width:205px;
     object-fit: contain;
     padding: 0 0 0 50px;
 }
-
 .section_1 {
     &__img{
         width:100%;
@@ -76,16 +136,14 @@ nav{
         font-size: 22px;
         padding: 10px 20px;
         margin: 35px;
-        &:hover{
-            /*ANIMATION FOR OPACITY*/
-        }
+        @include btn_hover;
     }
 }
 .about{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin: 70px 80px 130px;
+    margin: 70px 80px 115px;
     p{
         margin-top:40px;
         line-height: 220%;
@@ -108,6 +166,8 @@ nav{
         padding: 0 0 10px;
     }
     &__card{
+        
+        position:relative;
         margin: 10px 0px 0px;
         width: 32%;
         background:$clr-white;
@@ -120,6 +180,48 @@ nav{
             margin:0 0 25px;
             text-align: center;
         }
+      &:hover{
+        &::after{
+          opacity:1;
+          }
+        }
+        &--1{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+        &--2{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+        &--3{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+        &--4{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+        &--5{
+            &::after{
+                content:"Wanting to return to sport but continue to get stalled by niggles or old injuries that never settle?";
+                @include after;
+            }
+        }
+        &--6{
+            &::after{
+                content:"Text Here";
+                @include after;
+            }
+        }
+
     }
     &__icon{
         width:180px;
@@ -168,7 +270,7 @@ footer{
         text-decoration:none;
         color:$clr-main;
         &:hover{
-            color:$clr-secondary;
+            @include link_hover;
         }
     }
     &__social{
