@@ -20,35 +20,46 @@
   <body>
 
 <header>
-    <a href="index.html"><img id="logo" src="images/logo.jpg" alt="The letters PAWB in large capitals above the word physiotherapy." title="PAWB Physiotherapy"></a>
+    <a href="index.html"><img id="logo" src="images/logo.png" alt="The letters PAWB in large capitals above the word physiotherapy." title="PAWB Physiotherapy"></a>
     <nav>
-      <a href="#">About Us</a>
+      <a href="about.html">About Us</a>
       <div class="dropdown">
-      <a href="#">Services</a>
+      <a href="services.html">Services</a>
       <div class="dropdown__content">
-        <a href="#">Improve Pain</a>
-        <a href="#">Improve Performance</a>
-        <a href="#">Improve Wellbeing</a>
-        <a href="#">Video Consultations</a>
-        <a href="#">Home Visits</a>
+        <a href="services.html#diagnosis">Diagnosis</a>
+        <a href="services.html#treatment">Treatment</a>
+        <a href="services.html#rehab">Performance Rehabilitation</a>
+        <a href="services.html#video">Video Consultations</a>
+        <a href="services.html#visits">Home Visits</a>
       </div>
     </div>
       <a href="#contact-us">Contact Us</a>
-      <a href="#">Book Now</a>
-    </nav>
+      <a href="https://pawb-physiotherapy.uk2.cliniko.com/bookings" target="_blank" rel="noopener">Book Now</a>
+      </nav>
 </header>
 
 <div class="section_1">
-  <img class="section_1__img" src="images/main.jpg" alt="a physiotherapist holds a patients knee while the patient lies on a medical bed." title="PAWB Homepage">
+  <video autoplay loop poster="images/video_still_sm.jpg">
+    <source src="images/PAWB_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <div class="bar">
-    <button class="btn bar__btn">About Us</button>
-    <button class="btn bar__btn">Book Now</button>
+    <a href="https://pawb-physiotherapy.uk2.cliniko.com/bookings" target="_blank" rel="noopener">Book Now</a>
   </div>
 </div>
 
 <section class="about">
   <h1>About PAWB</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas erat imperdiet sed euismod nisi. Morbi leo urna molestie at elementum eu facilisis sed. Sagittis vitae et leo duis. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Leo duis ut diam quam nulla porttitor. </p>
+  <p>PAWB Physiotherapy was established in 2022, and stands for Performance And Well-Being. Pawb is also the Welsh word for everyone/everybody, and we believe that elite level physiotherapy should be available to everyone, without the wait.
+    </p>
+  <p>We understand the impact that pain or dysfunction can have on your life, whether that be long-standing arthritic knee pain, a debilitating episode of back pain, or an acute muscle tear. At PAWB we will accurately assess, diagnose, and create a bespoke treatment plan to help you achieve your specific goals, and get you back doing what you love most.
+    </p>
+  <p>We appreciate that everyone’s goals will be different, whether its walking to the corner shop pain free, or preparing for your next ultra marathon. We take the time to understand what your requirements are and give you a range of potential treatment options tailored to your needs. This may involve hands on therapy, a bespoke rehabilitation programme to fit around your lifestyle, onward referral for diagnostic imaging, or to one of our trusted partners in another allied health profession.
+    </p>
+  <p>We offer a range of services specific to your requirements – whether that be a one-off appointment, regular check-ins and updated plans, or home visits.
+    </p>
+  <p>Get in touch to see how we can work with you, and start your journey with PAWB today.  
+    </p>
 </section>
 
 <section class="services">
@@ -58,21 +69,21 @@
       <img class="services__icon" src="images/icon_knee.jpg" alt="a blue stick figure sits with a knee bent up. Sharp lines indicate the knee is in pain." title="Improve Pain">
       <h2>Improve Pain</h2>
     </a>
+    <a href="#" class="services__card services__card--5">
+      <img class="services__icon" src="images/icon_kick.jpg" alt="a blue stick figure sits with a knee bent up. Sharp lines indicate the knee is in pain." title="Improve Pain">
+      <h2>Improve Performance</h2>
+    </a>
     <a class="services__card services__card--2" href="#">
       <img class="services__icon" src="images/icon_back.jpg" alt="a blue stick figure sits with a knee bent up. Sharp lines indicate the knee is in pain." title="Improve Pain">
-      <h2>Aches and Pains</h2>
+      <h2>Improve Wellbeing</h2>
     </a>
     <a href="#" class="services__card services__card--3">
       <img class="services__icon" src="images/icon_weight.jpg" alt="a blue stick figure sits with a knee bent up. Sharp lines indicate the knee is in pain." title="Improve Pain">
-      <h2>Post Operative <br>Pre-hab and Rehab</h2>
+      <h2>Clinic</h2>
     </a>
     <a href="#" class="services__card services__card--4">
       <img class="services__icon" src="images/icon_stretch.jpg" alt="a blue stick figure sits with a knee bent up. Sharp lines indicate the knee is in pain." title="Improve Pain">
-      <h2>Reduced Mobility</h2>
-    </a>
-    <a href="#" class="services__card services__card--5">
-      <img class="services__icon" src="images/icon_kick.jpg" alt="a blue stick figure sits with a knee bent up. Sharp lines indicate the knee is in pain." title="Improve Pain">
-      <h2>Improved Performance</h2>
+      <h2>Home Visit</h2>
     </a>
     <a href="#" class="services__card services__card--6">
       <img class="services__icon" src="images/icon_video.jpg" alt="a blue stick figure sits with a knee bent up. Sharp lines indicate the knee is in pain." title="Improve Pain">
@@ -91,20 +102,37 @@
 </div>
 
 <footer id="contact-us">
-  <img class="map" src="images/map.png" alt="a map of Cardiff displaying the location of PAWB Physiotherapy" title="map">
+  <div class="contact">
+  <img class="map" src="images/map_sm.png" alt="a map of Cardiff displaying the location of PAWB Physiotherapy" title="map">
   <div class="find_us">
     <p>Email<br>
-    <a href = "mailto: abc@example.com">email@example.co.uk</a><br>
+    <a href="contact/fcf.form.htm">Email us</a><br>
     <br>
     Call<br>
     029 2021 4057<br>
     <br>
     Find us<br>
-    Address Line 1, Address Line 2<br>
-    Cardiff, Postcode</p>
+    PAWB Physiotherapy<br>
+    Dave's Gym<br>
+    160 Cottrell Road, Roath<br>
+    Cardiff CF243EX</p>
+      <div class="find_us__socials">
+        <a href="https://www.instagram.com/pawbphysiotherapy/"><img class="find_us__social" src="images/insta.png" alt="instagram logo" title="Instagram"></a>
+        <a href="#"><img class="find_us__social" src="images/facebook.png" alt="facebook logo" title="Facebook"></a>
+        <a href="#"><img class="find_us__social" src="images/twitter.png" alt="twitter logo" title="Twitter"></a>
+        <a href="https://www.linkedin.com/company/pawb-physiotherapy/"><img class="find_us__social" src="images/linkedin.png" alt="linkedin logo" title="LinkedIn"></a>
+      </div>
+  </div>
+</div>
 
-    <a href="#"><img class="find_us__social" src="images/instagram.png" alt="instagram logo" title="Instagram"></a>
-    <a href="#"><img class="find_us__social" src="images/facebook.png" alt="facebook logo" title="Facebook"></a>
+  <div class="trusted_by">
+    <img class="trusted_by__logo trusted_by__logo--bg" src="images/HW.jpg" alt="Hockey Wales logo" title="Hockey Wales">
+    <img class="trusted_by__logo trusted_by__logo--sm" src="images/BAPAM.jpg" alt="BAPAM logo" title="BAPAM">
+    <img class="trusted_by__logo trusted_by__logo--bg" src="images/GBH.jpg" alt="GB Hockey logo" title="GB Hockey">
+    <img class="trusted_by__logo" src="images/BW.jpg" alt="Badminton Wales logo" title="Badminton Wales">
+    <img class="trusted_by__logo" src="images/SW.jpg" alt="Sport Wales logo" title="Sport Wales">
+    <img class="trusted_by__logo" src="images/BUCS.jpg" alt="BUCS logo" title="BUCS">
+    <img class="trusted_by__logo trusted_by__logo--sm" src="images/WNO.jpg" alt="Welsh National Opera logo" title="WNO">
   </div>
 </footer>
   </body>
