@@ -197,6 +197,7 @@ nav a {
   font-size: 30px;
   text-shadow: 1px 1px 1px rgba(40, 55, 51, 0.15);
   text-align: center;
+  color: white;
 }
 .services__card:hover::after {
   opacity: 1;
