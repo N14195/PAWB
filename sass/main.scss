@@ -3,7 +3,8 @@ $clr-main-hue:198;
 $clr-secondary:#7ca7ad;
 $clr-white:white;
 $clr-black:black;
-$grey-background:#f6f5f6;
+$clr-font:lighten($clr-black, 8%);
+$grey-background:#fafaf9;
 $dropdown-bg:rgba(255, 255, 255, 0.8);
 
 @mixin link_hover {
@@ -12,7 +13,7 @@ $dropdown-bg:rgba(255, 255, 255, 0.8);
 @mixin btn_hover {
     opacity:1;
     &:hover{
-        opacity:0.84;
+        opacity:0.85;
         transition:opacity 200ms;
     }
 }
@@ -37,12 +38,22 @@ $dropdown-bg:rgba(255, 255, 255, 0.8);
 }
 
 body{ 
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
     min-height: 100vh;
     margin:0px;
     font-family: 'Montserrat', sans-serif;
-    color:$clr-main;
+    color:$clr-font;
+    background-color:$grey-background;
 }
+hr{
+    width:90%;
+    border: 0.5px solid $clr-font;
+}
+
 h1 {
+    color:$clr-main;
     font-size:35px;
     font-weight: 300;
     margin:0;
@@ -67,10 +78,12 @@ a{
 }
 header{
     height:120px;
+    width: 100%;
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items:flex-end;
+    margin-bottom:20px;
 }
 nav{
     display:flex;
@@ -107,38 +120,51 @@ nav{
     object-fit: contain;
     padding: 0 0 0 50px;
 }
-.section_1{
+.video_bar{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     &__video{
         width:100%;
         object-fit:cover;
-        object-position: 0 15%;
+        object-position: 0 0px;
         height:450px;
-        margin-top: 20px;
     }
-}
-.bar{
-    background-color: $clr-main;
-    height:115px;
-    width:100%;
-    margin-top:-4px;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
     a{
-        background-color: $clr-white;
+        background-color: rgba(255, 255, 255, 0.85);
+        color:darken($clr-main, 7%);
         border: none; 
         font-size: 30px;
         padding: 12px 25px;
-        margin: 35px;
+        margin: -130px 0 75px;
         @include btn_hover;
+        z-index: 1;
+    }
+    
+}
+.banner{
+    width:100%;
+    height:430px;
+    background-size: cover;
+    background-position: 0px -90px;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+    justify-content:center;
+    h1{
+        color:$clr-white;
+        font-size:40px;
+        font-weight:400;
     }
 }
 .about{
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
-    margin: 70px 80px 115px;
+    margin: 70px 0px 115px;
+    width:70%;
     p{
         margin-top:25px;
         line-height: 220%;
@@ -155,8 +181,15 @@ nav{
         font-size: 40px;
         margin: 0 0 40px;
     }
+    a{
+        color:$clr-white;
+        font-weight:400;
+        &:hover{
+            color:$clr-white;
+        }
+    }
     &__container{
-        background:$grey-background;
+        background:darken($grey-background, 10%);
         display:flex;
         flex-flow:row wrap;
         justify-content:space-evenly;
@@ -164,18 +197,28 @@ nav{
         padding: 0 0 10px;
     }
     &__card{
-        
         position:relative;
         margin: 10px 0px 0px;
         width: 32%;
-        background:$clr-white;
         height:300px;
         display:flex;
         flex-flow:column nowrap;
         align-items:center;
-        justify-content: space-between;
+        justify-content: center;
+        background-size: cover;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(255,255,255,0.25);
+        }
         h2{
-            margin:0 0 25px;
+            font-weight: 500;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px rgb(40 55 51 / 15%);
             text-align: center;
         }
       &:hover{
@@ -209,7 +252,7 @@ nav{
         }
         &--5{
             &::after{
-                content:"Wanting to return to sport but continue to get stalled by niggles or old injuries that never settle?";
+                content:"Text Here";
                 @include after;
             }
         }
@@ -220,10 +263,6 @@ nav{
             }
         }
 
-    }
-    &__icon{
-        width:180px;
-        margin:20px 0 0;
     }
 }
 .testimonial{
@@ -251,6 +290,7 @@ footer{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
     margin:95px 0 110px;
     .map{
         width: 390px;
@@ -267,11 +307,17 @@ footer{
 
 .find_us{
     height:310px;
-    padding:20px 0 0;
+    padding:10px 0 0;
+    h1{
+        font-size: 20px;
+        margin: 15px 0px 3px;
+    }
     p{
-        margin:0 0 30px;
+        margin:0 0 25px;
+        font-size:16px;
     }
     a{
+        font-size:20px;
         font-weight:500;
     }
     &__socials{
@@ -308,30 +354,37 @@ footer{
     align-items: center;
     margin:45px 50px;
     h1{
-        margin:22px;
+        margin:40px 0 20px;
     }
     h2{
         font-weight:bold;
         font-size:26px;
         margin: 10px;
+        color:$clr-main;
     }
     h3{
-        margin:15px 0 0;
+        margin:0 0 15px;
+        color:$clr-main;
     }
     p{
         margin:10px;
     }
     ul {
         list-style-type: '- ';
+        margin: 25px 0 50px -350px;
     }
     li {
         margin: 5px 0 0;
+    }
+    img{
+        margin: 10px 0 30px;
     }
     &__jonny{
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         margin:0 0 25px;
+        width:80%;
     }
 }
 
@@ -339,11 +392,16 @@ footer{
     display:flex;
     flex-flow:row nowrap;
     align-items:flex-start;
-    width:100%;
+    width:95%;
     justify-content: space-between;
+    margin-top: 40px;
+    img{
+        margin: 20px 0 25px;
+        height: 200px;
+    }
     &__card{
         text-align: center;
-        width: 23%;
+        width: 24%;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
@@ -351,11 +409,11 @@ footer{
             font-weight: bold;
             font-size: 22px;
             margin: 30px 10px 10px;
-            height: 50px;
+            height: 55px;
             }
         h3{
             font-weight:300;
-            height:60px;
+            height:50px;
         }
     }
 }
@@ -364,7 +422,8 @@ footer{
     display:flex;
     flex-flow:row nowrap;
     justify-content: space-between;
-    margin:65px 50px;
+    margin: 110px 0 70px;
+    width: 80%;
     &__divider{
         background-color:$clr-main;
         color:$clr-white;
@@ -379,12 +438,13 @@ footer{
         display:flex;
         flex-flow:column nowrap;
         align-items: flex-start;
-        width:60%;
+        width:58%;
     }
     h2{
         font-size: 24px;
         font-weight: 600;
         margin: 0 0 10px;
+        color:$clr-main;
     }
     &__heading{
         display:flex;
@@ -394,6 +454,6 @@ footer{
 }
 .blank_pic{
     height:300px;
-    width:400px;
-    background-color:#3a7a96;
+    object-fit: cover;
+    width:36%;
 }

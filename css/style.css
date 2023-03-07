@@ -1,11 +1,21 @@
 body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   min-height: 100vh;
   margin: 0px;
   font-family: "Montserrat", sans-serif;
-  color: #3a7a96;
+  color: #141414;
+  background-color: #fafaf9;
+}
+
+hr {
+  width: 90%;
+  border: 0.5px solid #141414;
 }
 
 h1 {
+  color: #3a7a96;
   font-size: 35px;
   font-weight: 300;
   margin: 0;
@@ -34,10 +44,12 @@ a:hover {
 
 header {
   height: 120px;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-end;
+  margin-bottom: 20px;
 }
 
 nav {
@@ -77,42 +89,56 @@ nav a {
   padding: 0 0 0 50px;
 }
 
-.section_1__video {
-  width: 100%;
-  object-fit: cover;
-  object-position: 0 15%;
-  height: 450px;
-  margin-top: 20px;
-}
-
-.bar {
-  background-color: #3a7a96;
-  height: 115px;
-  width: 100%;
-  margin-top: -4px;
+.video_bar {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
-.bar a {
-  background-color: white;
+.video_bar__video {
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 0px;
+  height: 450px;
+}
+.video_bar a {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #30657c;
   border: none;
   font-size: 30px;
   padding: 12px 25px;
-  margin: 35px;
+  margin: -130px 0 75px;
   opacity: 1;
+  z-index: 1;
 }
-.bar a:hover {
-  opacity: 0.84;
+.video_bar a:hover {
+  opacity: 0.85;
   transition: opacity 200ms;
+}
+
+.banner {
+  width: 100%;
+  height: 430px;
+  background-size: cover;
+  background-position: 0px -90px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .about {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  margin: 70px 80px 115px;
+  margin: 70px 0px 115px;
+  width: 70%;
 }
 .about p {
   margin-top: 25px;
@@ -131,8 +157,15 @@ nav a {
   font-size: 40px;
   margin: 0 0 40px;
 }
+.services a {
+  color: white;
+  font-weight: 400;
+}
+.services a:hover {
+  color: white;
+}
 .services__container {
-  background: #f6f5f6;
+  background: #e3e3dd;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -143,15 +176,26 @@ nav a {
   position: relative;
   margin: 10px 0px 0px;
   width: 32%;
-  background: white;
   height: 300px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  background-size: cover;
+}
+.services__card::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.25);
 }
 .services__card h2 {
-  margin: 0 0 25px;
+  font-weight: 500;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px rgba(40, 55, 51, 0.15);
   text-align: center;
 }
 .services__card:hover::after {
@@ -222,7 +266,7 @@ nav a {
   transition: opacity 350ms;
 }
 .services__card--5::after {
-  content: "Wanting to return to sport but continue to get stalled by niggles or old injuries that never settle?";
+  content: "Text Here";
   color: white;
   display: flex;
   padding: 30px 30px;
@@ -253,10 +297,6 @@ nav a {
   opacity: 0;
   transition: opacity 350ms;
 }
-.services__icon {
-  width: 180px;
-  margin: 20px 0 0;
-}
 
 .testimonial {
   height: 210px;
@@ -284,6 +324,7 @@ footer {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  width: 100%;
   margin: 95px 0 110px;
 }
 footer .map {
@@ -300,12 +341,18 @@ footer .contact {
 
 .find_us {
   height: 310px;
-  padding: 20px 0 0;
+  padding: 10px 0 0;
+}
+.find_us h1 {
+  font-size: 20px;
+  margin: 15px 0px 3px;
 }
 .find_us p {
-  margin: 0 0 30px;
+  margin: 0 0 25px;
+  font-size: 16px;
 }
 .find_us a {
+  font-size: 20px;
   font-weight: 500;
 }
 .find_us__socials {
@@ -343,42 +390,54 @@ footer .contact {
   margin: 45px 50px;
 }
 .who h1 {
-  margin: 22px;
+  margin: 40px 0 20px;
 }
 .who h2 {
   font-weight: bold;
   font-size: 26px;
   margin: 10px;
+  color: #3a7a96;
 }
 .who h3 {
-  margin: 15px 0 0;
+  margin: 0 0 15px;
+  color: #3a7a96;
 }
 .who p {
   margin: 10px;
 }
 .who ul {
   list-style-type: "- ";
+  margin: 25px 0 50px -350px;
 }
 .who li {
   margin: 5px 0 0;
+}
+.who img {
+  margin: 10px 0 30px;
 }
 .who__jonny {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   margin: 0 0 25px;
+  width: 80%;
 }
 
 .trusted_partners {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  width: 100%;
+  width: 95%;
   justify-content: space-between;
+  margin-top: 40px;
+}
+.trusted_partners img {
+  margin: 20px 0 25px;
+  height: 200px;
 }
 .trusted_partners__card {
   text-align: center;
-  width: 23%;
+  width: 24%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -387,18 +446,19 @@ footer .contact {
   font-weight: bold;
   font-size: 22px;
   margin: 30px 10px 10px;
-  height: 50px;
+  height: 55px;
 }
 .trusted_partners__card h3 {
   font-weight: 300;
-  height: 60px;
+  height: 50px;
 }
 
 .services_page {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 65px 50px;
+  margin: 110px 0 70px;
+  width: 80%;
 }
 .services_page__divider {
   background-color: #3a7a96;
@@ -414,12 +474,13 @@ footer .contact {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  width: 60%;
+  width: 58%;
 }
 .services_page h2 {
   font-size: 24px;
   font-weight: 600;
   margin: 0 0 10px;
+  color: #3a7a96;
 }
 .services_page__heading {
   display: flex;
@@ -429,8 +490,8 @@ footer .contact {
 
 .blank_pic {
   height: 300px;
-  width: 400px;
-  background-color: #3a7a96;
+  object-fit: cover;
+  width: 36%;
 }
 
 /*# sourceMappingURL=style.css.map */
