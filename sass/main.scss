@@ -20,12 +20,10 @@ $dropdown-bg:rgba(255, 255, 255, 0.8);
 @mixin after{
     color:$clr-white;
     display:flex;
-    padding:30px 30px;
-    text-align: justify;
-    text-justify: inter-word;
+    padding:40px 40px;
     align-items:center;
     justify-content:center;
-    font-size:25px;
+    font-size:22px;
     background-color:$clr-main;
     @include card-opacity;
 
@@ -183,7 +181,6 @@ nav{
     }
     a{
         color:$clr-white;
-        font-weight:400;
         &:hover{
             color:$clr-white;
         }
@@ -218,7 +215,7 @@ nav{
         h2{
             font-weight: 500;
             font-size: 30px;
-            text-shadow: 1px 1px 1px rgb(40 55 51 / 15%);
+            text-shadow: 2px 2px 2px rgb(43 54 51 / 25%);
             text-align: center;
             color:$clr-white;
         }
@@ -229,40 +226,41 @@ nav{
         }
         &--1{
             &::after{
-                content:"Text Here";
+                content:"A 60 minute initial consultation to discuss a new problem or injury that is causing you pain or dysfunction.";
                 @include after;
             }
         }
         &--2{
             &::after{
-                content:"Text Here";
+                content:"A bespoke plan encompassing the most effective treatments available to you.";
                 @include after;
             }
         }
         &--3{
             &::after{
-                content:"Text Here";
+                content:"For those wanting to return to the sport or activity that they love. An ongoing plan for full injury recovery and reduced future injury risk.";
                 @include after;
             }
         }
         &--4{
             &::after{
-                content:"Text Here";
+                content:"If you have recently had an orthopaedic operation and want extra support to help you recover as quickly as possible, then PAWB physiotherapy is the place for you.";
                 @include after;
             }
         }
         &--5{
             &::after{
-                content:"Text Here";
+                content:"The most effective way to assess you in your own environment. Ideal for mobility issues or getting a head start with your post-operative rehabilitation.";
                 @include after;
             }
         }
         &--6{
             &::after{
-                content:"Text Here";
+                content:"Our video consultations are the perfect solution for those unable to travel due to transport issues or time constraints.";
                 @include after;
             }
         }
+
 
     }
 }
@@ -294,8 +292,7 @@ footer{
     width: 100%;
     margin:95px 0 110px;
     .map{
-        width: 390px;
-        height:300px;
+        height:330px;
         object-fit: cover;
         margin:0 45px 0 0;
     }
@@ -308,10 +305,15 @@ footer{
 
 .find_us{
     height:310px;
-    padding:10px 0 0;
     h1{
+        font-size:26px;
+        font-weight:400;
+        margin:0 0 15px;
+    }
+    h2{
         font-size: 20px;
         margin: 15px 0px 3px;
+        color:$clr-main;
     }
     p{
         margin:0 0 25px;
@@ -319,7 +321,7 @@ footer{
     }
     a{
         font-size:20px;
-        font-weight:500;
+        font-weight:400;
     }
     &__socials{
         margin-left:-5px;
@@ -353,7 +355,7 @@ footer{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin:45px 50px;
+    margin:45px 10px;
     h1{
         margin:40px 0 20px;
     }
@@ -398,23 +400,28 @@ footer{
     margin-top: 40px;
     img{
         margin: 20px 0 25px;
-        height: 200px;
+        height: 185px;
     }
     &__card{
         text-align: center;
-        width: 24%;
+        width: 20%;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         h2{
-            font-weight: bold;
-            font-size: 22px;
-            margin: 30px 10px 10px;
+            font-weight: 600;
+            font-size: 20px;
+            margin: 10px 0px 10px;
             height: 55px;
             }
         h3{
             font-weight:300;
             height:50px;
+        }
+        h4{
+            color:$clr-main;
+            font-weight:400;
+            margin:0;
         }
     }
 }
@@ -423,7 +430,8 @@ footer{
     display:flex;
     flex-flow:row nowrap;
     justify-content: space-between;
-    margin: 110px 0 70px;
+    align-items: center;
+    margin: 90px 0 70px;
     width: 80%;
     &__divider{
         background-color:$clr-main;
@@ -440,6 +448,15 @@ footer{
         flex-flow:column nowrap;
         align-items: flex-start;
         width:58%;
+        p{
+            font-size:16px;
+            margin:10px 0 5px;
+        }
+    }
+    &__pic{
+        height: 380px;
+        object-fit: cover;
+        width: 38%;
     }
     h2{
         font-size: 24px;
@@ -452,9 +469,4 @@ footer{
         justify-content: center;
         margin:67px 0 20px;
     }
-}
-.blank_pic{
-    height:300px;
-    object-fit: cover;
-    width:36%;
 }
