@@ -327,15 +327,12 @@ nav a {
   animation-delay: 0s;
 }
 .testimonial__text--1 {
-  animation-delay: 12.5s;
+  animation-delay: 16.6666666667s;
 }
 .testimonial__text--2 {
-  animation-delay: 25s;
+  animation-delay: 33.3333333333s;
 }
 .testimonial__text--3 {
-  animation-delay: 37.5s;
-}
-.testimonial__text--4 {
   animation-delay: 50s;
 }
 .testimonial__text--2 p {
