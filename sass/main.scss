@@ -1,3 +1,4 @@
+@use 'sass:math';
 $clr-main:#3a7a96;
 $clr-main-hue:198;
 $clr-secondary:#7ca7ad;
@@ -6,6 +7,10 @@ $clr-black:black;
 $clr-font:lighten($clr-black, 8%);
 $grey-background:#fafaf9;
 $dropdown-bg:rgba(255, 255, 255, 0.8);
+$anim-dur:50s;
+$num-testimonials:4;
+$anim-delay: math.div($anim-dur, $num-testimonials);
+
 
 @mixin link_hover {
     color:$clr-secondary;
@@ -34,7 +39,26 @@ $dropdown-bg:rgba(255, 255, 255, 0.8);
     opacity:0;
     transition:opacity 350ms;
 }
-
+@keyframes testimonials{
+    0%{
+        opacity:0;
+    }
+    5%{
+        opacity:0;
+    }
+    15%{
+        opacity:1;
+    }
+    25%{
+        opacity:1;
+    }
+    30%{
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+}
 body{ 
     display:flex;
     flex-flow:column nowrap;
@@ -265,25 +289,45 @@ nav{
     }
 }
 .testimonial{
-        height:210px;
+        position:relative;
+        height:220px;
         width: 100%;
         margin: 100px 0 0;
         display:flex;
+        
         align-items:center;
         justify-content: center;
         background-image: url("../images/testimonial.jpg");
         background-size: cover;
-    p{
-        color:$clr-white;
-        width:90%;
-        .quotes{
-            font-size:30px;
+        &__text{
+            opacity:0;
+            position:absolute;
+            width:90%;
+                animation:testimonials $anim-dur infinite;
+                @for $i from 0 through $num-testimonials{
+                    &--#{$i} {
+                        animation-delay:$anim-delay * $i;
+
+                    }
+                }
+        
+            &--2{
+                p{
+                    font-size:16px;
+                }
+            }
         }
-        .name{
+        p{
+            color:$clr-white;
+            .quotes{
+            font-size:24px;
+        }
+            .name{
             font-size:16px;
         }
     }
 }
+
 footer{
     display:flex;
     flex-flow: column nowrap;
