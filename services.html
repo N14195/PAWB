@@ -18,32 +18,46 @@
 <body>
     <header>
         <a href="index.html"><img id="logo" src="images/logo.png" alt="The letters PAWB in large capitals above the word physiotherapy." title="PAWB Physiotherapy"></a>
-        <nav>
-            <div class="dropdown">
-                <a href="about.html">About Us</a>
-                  <div class="dropdown__content">
-                    <a href="index.html#about-pawb">About PAWB</a>
-                    <a href="about.html#team">Meet the Team</a>
-                    <a href="about.html#partners">Trusted Partners</a>
-                    
-                  </div>
-                </div>
+        <nav class="nav__desktop">
+          <div class="dropdown">
+          <a href="about.html">About Us</a>
+            <div class="dropdown__content">
+              <a href="index.html#about-pawb">About PAWB</a>
+              <a href="about.html#team">Meet the Team</a>
+              <a href="about.html#partners">Trusted Partners</a>
+            </div>
+          </div>
           <div class="dropdown">
           <a href="services.html">Services</a>
           <div class="dropdown__content">
-            <a href="#diagnosis">Diagnosis</a>
-            <a href="#treatment">Treatment</a>
-            <a href="#rehab">Performance Rehabilitation</a>
+            <a href="services.html#diagnosis">Diagnosis</a>
+            <a href="services.html#treatment">Treatment</a>
+            <a href="services.html#rehab">Performance Rehabilitation</a>
             <a href="services.html#post-op">Post-Operative Physiotherapy</a>
-            <a href="#video">Video Consultations</a>
-            <a href="#visits">Home Visits</a>
+            <a href="services.html#video">Video Consultations</a>
+            <a href="services.html#visits">Home Visits</a>
           </div>
         </div>
-          <a href="index.html#contact-us">Contact Us</a>
+          <a href="#contact-us">Contact Us</a>
           <a href="https://pawb-physiotherapy.uk2.cliniko.com/bookings" target="_blank" rel="noopener">Book Now</a>
           </nav>
+          <div class="nav__mob">
+            <div class="container nav__mob--container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>  
+              <div class=nav__mob--links>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#contact-us">Contact</a>
+            <a href="https://pawb-physiotherapy.uk2.cliniko.com/bookings" target="_blank" rel="noopener">Book Now</a>
+          </div>
+          </div>
     </header>
-
+    
 <div class="banner banner--services" style="background-image: url('images/services_banner.jpg');" >
         <h1>Services</h1>
 </div>
@@ -59,7 +73,7 @@
         <img class="services_page__pic" src="images/diagnosis.jpg" alt="Close-up of a man asessing someone's knee while the person is sat on a treatment bench." title="Diagnosis">
     </section>  
 <hr>
-    <section class="services_page" id="treatment">
+    <section class="services_page services_page--reverse" id="treatment">
         <img class="services_page__pic" src="images/treatment.jpg" alt="A man massages the back of a patient while they lie face down on a treatment bench." title="treatment">
         <div class="services_page__text">
             <h2>Treatment</h2>
@@ -88,7 +102,7 @@
         <img class="services_page__pic" src="images/performance_rehab.jpg" alt="A man lifts a weight in the foreground while a physiotherapist watches." title="treatment">
     </section> 
     <hr>    
-    <section class="services_page" id="post-op">
+    <section class="services_page services_page--reverse" id="post-op">
         <img class="services_page__pic" src="images/post_op_physio.jpg" alt="A physiotherapist holds the heel of a patient while they stand in a bent knee position." title="treatment">
         <div class="services_page__text">
             <h2>Post-Operative Physiotherapy</h2>
@@ -122,7 +136,7 @@
         <img class="services_page__pic" src="images/video_consult.jpg" alt="A man and woman sit face to face having a conversation in an office." title="treatment">
     </section>           
 <hr>
-    <section class="services_page" id="visits">
+    <section class="services_page services_page--reverse" id="visits">
         <img class="services_page__pic" src="images/home_visits.jpg" alt="Close-up of a man talking to a patient." title="treatment">
         <div class="services_page__text">
             <h2>Home Visits</h2>
@@ -133,7 +147,7 @@
         </div>
     
     </section>           
-<footer>
+<footer class="footer--mod">
         
             <div class="find_us__socials find_us__socials--about">
               <a href="https://www.instagram.com/pawbphysiotherapy/"><img class="find_us__social" src="images/insta.png" alt="instagram logo" title="Instagram"></a>

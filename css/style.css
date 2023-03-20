@@ -36,7 +36,7 @@ hr {
 
 h1 {
   color: #3a7a96;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 300;
   margin: 0;
 }
@@ -51,7 +51,6 @@ p {
   font-size: 18px;
   margin: 0;
   text-align: justify;
-  text-justify: inter-word;
 }
 
 a {
@@ -79,6 +78,10 @@ nav {
 }
 nav a {
   padding: 0 0 0 30px;
+}
+
+.nav--mob {
+  display: none;
 }
 
 .dropdown {
@@ -178,7 +181,6 @@ nav a {
   margin-top: 100px;
 }
 .services h1 {
-  font-size: 40px;
   margin: 0 0 40px;
 }
 .services a {
@@ -562,6 +564,271 @@ footer .contact {
   display: flex;
   justify-content: center;
   margin: 67px 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 15px;
+  }
+  header {
+    margin: 45px 0 20px;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 125px;
+  }
+  header #logo {
+    padding: 0;
+  }
+  .nav__desktop {
+    display: none;
+  }
+  .nav__mob {
+    width: 100%;
+  }
+  .nav__mob .container {
+    max-width: 768px;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .nav__mob--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+  }
+  .nav__mob--container input[type=checkbox]:checked ~ .nav__mob--links {
+    transform: translateX(0);
+  }
+  .nav__mob--container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
+    transform: translate(7px) rotate(45deg);
+  }
+  .nav__mob--container input[type=checkbox]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  .nav__mob--container input[type=checkbox]:checked ~ .hamburger-lines .line3 {
+    transform: translate(7px) rotate(-45deg);
+  }
+  .nav__mob--container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 135px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .nav__mob--container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 135px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav__mob--container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #3a7a96;
+  }
+  .nav__mob--container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .nav__mob--container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .nav__mob--container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .nav__mob--links {
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 300px;
+    padding-top: 40px;
+    background: #fafaf9;
+    height: 270px;
+    width: 100%;
+    transform: translate(-150%);
+    transition: transform 0.5s ease-in-out;
+  }
+  .nav__mob--links a {
+    font-size: 20px;
+    margin: 20px 0 10px;
+  }
+  .video_bar__video {
+    height: 235px;
+  }
+  .video_bar a {
+    font-size: 22px;
+    padding: 10px 20px;
+    margin: -85px 0 40px;
+  }
+  .banner {
+    height: 235px;
+    background-position: 0;
+  }
+  .services {
+    margin-top: 85px;
+  }
+  .services__card {
+    width: 94%;
+    height: 270px;
+  }
+  .services__card--1::after {
+    font-size: 20px;
+  }
+  .services__card--2::after {
+    font-size: 20px;
+  }
+  .services__card--3::after {
+    font-size: 20px;
+  }
+  .services__card--4::after {
+    font-size: 20px;
+  }
+  .services__card--5::after {
+    font-size: 20px;
+  }
+  .services__card--6::after {
+    font-size: 20px;
+  }
+  .about {
+    margin: 70px 0px 60px;
+    width: 75%;
+  }
+  .about p {
+    line-height: 180%;
+  }
+  .who {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .who p {
+    width: 85%;
+    line-height: 180%;
+    margin: 10px 0;
+  }
+  .who ul {
+    margin: 0;
+    font-size: 13px;
+  }
+  .who .headshot {
+    width: 60%;
+    height: 310px;
+    object-position: 0 -28px;
+  }
+  .who__jonny {
+    width: 100%;
+  }
+  .who__jonny--headshot {
+    flex-flow: column nowrap;
+    margin: 25px 0 0px;
+  }
+  .who__jonny--text {
+    width: 85%;
+    line-height: 2;
+  }
+  .trusted_partners {
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .trusted_partners__card {
+    width: 80%;
+  }
+  .trusted_partners__card h2 {
+    height: auto;
+  }
+  .trusted_partners__card h3 {
+    height: auto;
+    margin: 10px 0 15px;
+  }
+  .trusted_partners img {
+    margin: 40px 0 25px;
+  }
+  .services_page {
+    flex-flow: column nowrap;
+    margin: 50px 0 60px;
+  }
+  .services_page--reverse {
+    flex-flow: column-reverse nowrap;
+  }
+  .services_page__text {
+    width: auto;
+  }
+  .services_page__pic {
+    height: fit-content;
+    object-fit: cover;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .services_page__divider p {
+    width: 90%;
+  }
+  .testimonial {
+    background-position: -730px 0px;
+    height: 300px;
+  }
+  .testimonial p {
+    font-size: 13px;
+  }
+  .testimonial p .name {
+    font-size: 14px;
+  }
+  .trusted_by {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  .trusted_by__logo {
+    height: 35px;
+    padding: 5px 3px;
+  }
+  .trusted_by__logo--xs {
+    height: 25px;
+  }
+  .trusted_by__logo--sm {
+    height: 30px;
+  }
+  .trusted_by__logo--bg {
+    height: 40px;
+  }
+  .footer--mod {
+    margin: 25px 0;
+  }
+  footer {
+    margin: 65px 0;
+  }
+  footer .find_us h1 {
+    font-size: 30px;
+    margin: 0 0 25px;
+  }
+  footer .find_us__social {
+    height: 35px;
+  }
+  footer .contact {
+    flex-flow: column-reverse nowrap;
+    margin-bottom: 40px;
+  }
+  footer .map {
+    margin: 20px 0;
+    width: 80%;
+    height: fit-content;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

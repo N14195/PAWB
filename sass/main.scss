@@ -9,6 +9,7 @@ $grey-background:#fafaf9;
 $dropdown-bg:rgba(255, 255, 255, 0.8);
 $anim-dur:60s;
 $num-testimonials:3;
+$num-services:6;
 $anim-delay: math.div($anim-dur, $num-testimonials);
 
 
@@ -38,6 +39,10 @@ $anim-delay: math.div($anim-dur, $num-testimonials);
     inset:0 0;
     opacity:0;
     transition:opacity 350ms;
+}
+@mixin hamburger ($origin, $duration){
+    transform-origin: 0% $origin;
+    transition: transform $duration ease-in-out;
 }
 @keyframes testimonials{
     0%{
@@ -76,7 +81,7 @@ hr{
 
 h1 {
     color:$clr-main;
-    font-size:35px;
+    font-size:40px;
     font-weight: 300;
     margin:0;
 }
@@ -89,7 +94,6 @@ p{
     font-size:18px;
     margin:0;
     text-align: justify;
-    text-justify: inter-word;
 }
 a{
     text-decoration:none;
@@ -114,6 +118,11 @@ nav{
     a{
         padding:0 0 0 30px;
         }
+}
+.nav{
+    &--mob{
+        display:none;
+    }
 }
 .dropdown{
     position: relative;
@@ -204,7 +213,6 @@ nav{
     align-items:center;
     margin-top:100px;
     h1{
-        font-size: 40px;
         margin: 0 0 40px;
     }
     a{
@@ -544,4 +552,273 @@ footer{
         justify-content: center;
         margin:67px 0 20px;
     }
+}
+@media screen and (max-width:768px){
+        h1{
+            font-size:30px;
+        }
+        p{
+            font-size:15px;
+        }
+    header{
+        margin:45px 0 20px;
+        flex-flow:column nowrap;
+        align-items:center;
+        height:125px;
+        #logo{
+            padding:0;
+        }
+    }
+    .nav{
+        &__desktop{
+            display:none;
+        }
+        &__mob{
+            width:100%;
+            .container {
+                max-width: 768px;
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+                justify-content: center;
+              } 
+            &--container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 62px;
+                input[type="checkbox"]:checked ~ .nav__mob--links {
+                    transform: translateX(0);
+                  }
+                  
+                input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+                    transform: translate(7px) rotate(45deg);
+                  }
+                  
+                input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+                    transform: scaleY(0);
+                  }
+                  
+                input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+                    transform: translate(7px) rotate(-45deg);
+                  }
+                .checkbox {
+                    position: absolute;
+                    display: block;
+                    height: 32px;
+                    width: 32px;
+                    top: 135px;
+                    z-index: 5;
+                    opacity: 0;
+                    cursor: pointer;
+                  }
+                  .hamburger-lines {
+                    display: block;
+                    height: 26px;
+                    width: 32px;
+                    position: absolute;
+                    top: 135px;
+                    z-index: 3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                  .line {
+                    display: block;
+                    height: 4px;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: $clr-main;
+                  }
+                  .line1 {
+                    @include hamburger(0%,0.4s);
+                  }
+                  
+                  .line2 {
+                    transition: transform 0.2s ease-in-out;
+                  }
+                  
+                  .line3 {
+                    @include hamburger(100%,0.4s);
+                  }
+                }
+            }  
+            &--links{
+                z-index:2;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 300px;
+                padding-top: 40px;
+                background: $grey-background;
+                height: 270px;
+                width: 100%;
+                transform: translate(-150%);
+                transition: transform 0.5s ease-in-out;
+                a{
+                    font-size:20px;
+                    margin:20px 0 10px;
+                }           
+        }
+    }
+    }
+    .video_bar{
+        &__video{
+            height:235px;
+        }
+        a{
+            font-size: 22px;
+            padding: 10px 20px;
+            margin: -85px 0 40px;
+        }
+    }
+    .banner{
+        height:235px;
+        background-position:0;
+        }
+.services{
+    margin-top:85px;
+    &__card{
+        width: 94%;
+        height: 270px;
+        @for $i from 1 through $num-services{
+            &--#{$i}::after {
+                font-size:20px;
+
+            }
+        }
+        
+    }
+}
+.about{
+    margin: 70px 0px 60px;
+    width: 75%;
+    p{
+        line-height:180%;
+    }
+}
+.who{
+    width:100%;
+    margin-top:25px;
+    p{
+        width:85%;
+        line-height:180%;
+        margin: 10px 0;
+    }
+    ul{
+        margin:0;
+        font-size: 13px;
+    }
+    .headshot{
+        width: 60%;
+        height: 310px;
+        object-position: 0 -28px;
+        }
+    &__jonny{
+        width:100%;
+        &--headshot{
+            flex-flow:column nowrap;
+            margin: 25px 0 0px;
+        }
+        &--text{
+            width:85%;
+            line-height:2;
+        }
+    }
+}
+.trusted_partners{
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top:10px;
+    &__card{
+        h2{
+            height:auto;
+        }
+        h3{
+            height:auto;
+            margin: 10px 0 15px;
+        }
+        width:80%;
+    }
+    img{
+        margin:40px 0 25px;
+    }
+}
+
+.services_page{
+    flex-flow:column nowrap;
+    margin:50px 0 60px;
+    &--reverse{
+        flex-flow:column-reverse nowrap;
+    }
+    &__text{
+        width:auto;
+    }
+    &__pic{
+        height:fit-content;
+        object-fit: cover;
+        width: 100%;
+        margin-top: 20px;
+    }
+    &__divider{
+        p{
+            width: 90%;
+        }
+    }
+}
+
+.testimonial{
+    background-position: -730px 0px;
+    height:300px;
+    p{
+        font-size:13px;
+        .name{
+            font-size:14px;
+        }
+    }
+}
+.trusted_by{
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    &__logo{
+        height:35px;
+        padding:5px 3px;
+        &--xs{
+            height:25px;
+        }
+        &--sm{
+            height:30px;  
+        }
+        &--bg{
+            height:40px;
+        }
+    }
+}
+.footer{
+    &--mod{
+        margin:25px 0;
+    }
+}
+footer{
+    margin:65px 0;
+    .find_us{
+        h1{
+        font-size:30px;
+        margin:0 0 25px;
+        }
+        &__social{
+            height:35px;
+        }
+    }
+
+    .contact{
+        flex-flow:column-reverse nowrap;
+        margin-bottom:40px;
+    }
+    .map{
+        margin: 20px 0;
+        width: 80%;
+        height: fit-content;
+    }
+}
 }

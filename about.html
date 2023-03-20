@@ -11,22 +11,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>PAWB About Us</title>
 </head>
 
 <body>
     <header>
         <a href="index.html"><img id="logo" src="images/logo.png" alt="The letters PAWB in large capitals above the word physiotherapy." title="PAWB Physiotherapy"></a>
-        <nav>
-            <div class="dropdown">
-                <a href="about.html">About Us</a>
-                  <div class="dropdown__content">
-                    <a href="index.html#about-pawb">About PAWB</a>
-                    <a href="about.html#team">Meet the Team</a>
-                    <a href="about.html#partners">Trusted Partners</a>
-                  </div>
-                </div>
+        <nav class="nav__desktop">
+          <div class="dropdown">
+          <a href="about.html">About Us</a>
+            <div class="dropdown__content">
+              <a href="index.html#about-pawb">About PAWB</a>
+              <a href="about.html#team">Meet the Team</a>
+              <a href="about.html#partners">Trusted Partners</a>
+            </div>
+          </div>
           <div class="dropdown">
           <a href="services.html">Services</a>
           <div class="dropdown__content">
@@ -38,11 +38,26 @@
             <a href="services.html#visits">Home Visits</a>
           </div>
         </div>
-          <a href="index.html#contact-us">Contact Us</a>
+          <a href="#contact-us">Contact Us</a>
           <a href="https://pawb-physiotherapy.uk2.cliniko.com/bookings" target="_blank" rel="noopener">Book Now</a>
           </nav>
+          <div class="nav__mob">
+            <div class="container nav__mob--container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>  
+              <div class=nav__mob--links>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#contact-us">Contact</a>
+            <a href="https://pawb-physiotherapy.uk2.cliniko.com/bookings" target="_blank" rel="noopener">Book Now</a>
+          </div>
+          </div>
     </header>
-<div class="banner" style="background-image: url('images/about_banner.jpg');" >
+    <div class="banner" style="background-image: url('images/about_banner.jpg');" >
     <h1>About Us</h1>
 </div>
 <section class="who" id="team">
@@ -116,7 +131,7 @@
 
     </div>
 </section>
-<footer>
+<footer class="footer--mod">
         
             <div class="find_us__socials find_us__socials--about">
               <a href="https://www.instagram.com/pawbphysiotherapy/"><img class="find_us__social" src="images/insta.png" alt="instagram logo" title="Instagram"></a>
