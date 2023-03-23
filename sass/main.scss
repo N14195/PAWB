@@ -555,7 +555,7 @@ footer{
         margin:67px 0 20px;
     }
 }
-@media screen and (max-width:1120px) and (min-width:769px){
+@media screen and (min-width:769px) and (max-width:1120px){
     
     .trusted_by{
         &__logo{
@@ -859,7 +859,7 @@ footer{
     }
 }
 }
-@media screen and (max-width:1050px) and (min-width:655px){
+@media screen and (min-width:655px) and (max-width:1050px){
     .services{
         &__container{
             max-width:850px;
